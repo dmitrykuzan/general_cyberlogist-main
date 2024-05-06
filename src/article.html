@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+
+    <meta name="description" lang="ru" content="Очень красивое, точное и правильное описание сайта для оптимизации">
+    <meta name="keywords" lang="ru" content="">
+
+    <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/GothamPro-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Gotthard-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/SFProDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+    @include("./html/ui/header.html")
+    <main>
+        @include("./html/articlePage/article.html")
+    </main>
+    @include("./html/ui/footer.html")
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+.service {
+    padding-top: 85px;
+    padding-bottom: 75px;
+    background-image: linear-gradient(to right, rgba(#E7C1C3, .3), rgba(#A8A4F4, .4), rgba(#A5E3F8, .4));
+
+    &__title {
+        font-size: fluid-font(3.2rem, 1.8rem);
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-gap: 30px 15px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 55px;
+
+        @media (max-width: 992px) {
+            grid-gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 576px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 5px;
+        padding: 17px 17px 15px 100px;
+        min-height: 80px;
+        font-weight: 500;
+        font-size: fluid-font(1.8rem, 1.6rem);
+        color: var(--clr-default-100);
+        background-color: rgba(#5156ea, .5);
+        //background-color: #A8A4F4;
+
+        @media (max-width: 767px) {
+            padding: 12px 12px 12px 65px;
+            min-height: 64px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            border-radius: 3px;
+            width: 50px;
+            height: 50px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 767px) {
+                top: 12px;
+                left: 12px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &--1 {
+            &::before {
+                background-image: url("../img/service/repair.svg");
+            }
+        }
+
+        &--2 {
+            &::before {
+                background-image: url("../img/service/medicine.svg");
+            }
+        }
+
+        &--3 {
+            &::before {
+                background-image: url("../img/service/tool.svg");
+            }
+        }
+
+        &--4 {
+            &::before {
+                background-image: url("../img/service/products.svg");
+            }
+        }
+
+        &--5 {
+            &::before {
+                background-image: url("../img/service/equipment.svg");
+            }
+        }
+
+        &--6 {
+            &::before {
+                background-image: url("../img/service/goods.svg");
+            }
+        }
+
+        &--7 {
+            &::before {
+                background-image: url("../img/service/agricultural.svg");
+            }
+        }
+
+        &--8 {
+            &::before {
+                background-image: url("../img/service/perfumery.svg");
+            }
+        }
+
+        &--9 {
+            &::before {
+                background-image: url("../img/service/appliances.svg");
+            }
+        }
+
+        &--10 {
+            &::before {
+                background-image: url("../img/service/clothes.svg");
+            }
+        }
+
+        &--11 {
+            &::before {
+                background-image: url("../img/service/autoparts.svg");
+            }
+        }
+
+        &--12 {
+            &::before {
+                background-image: url("../img/service/shop.svg");
+            }
+        }
+    }
+
+    &__item + &__item {
+        @media (max-width: 576px) {
+            margin-top: 15px;
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+}

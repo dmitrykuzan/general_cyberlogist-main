@@ -1,0 +1,103 @@
+.company {
+  background-color: var(--clr-default-200);
+  padding-top: 15rem;
+
+  @media (max-width: 992px) {
+    padding-top: 10rem;
+    height: calc(100vh - 36rem);
+  }
+
+
+  &__breadcrumbs {
+    margin-bottom: 3rem;
+  }
+
+  &__wrapper {
+    padding: 3rem;
+    background-color: var(--clr-default-100);
+    margin-bottom: 32rem;
+
+    @media (max-width: 992px) {
+      margin-bottom: 15rem;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__title {
+    text-transform: initial;
+    padding-bottom: 2.5rem;
+    text-align: start;
+  }
+
+  &__list {
+    margin-bottom: 6rem;
+
+    @media (max-width: 575px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__item-title {
+    color: var(--clr-default-700);
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__item-inner {
+    a,
+    p {
+      color: #15162a;
+      font-family: "Oswald";
+      font-size: fluid-font(2.4rem, 2rem);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    min-width: 31rem;
+    max-width: 35rem;
+
+    &--1 {
+      position: relative;
+      background-color: var(--clr-primary-300);
+      box-shadow: inset 0px 7px 6px rgba(255, 255, 255, 0.40),
+        inset 0px -4px 6px #75c397;
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 0.6rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+
+      @media (max-width: 767px) {
+        margin-right: initial;
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 375px) {
+      min-width: 100%;
+    }
+  }
+}

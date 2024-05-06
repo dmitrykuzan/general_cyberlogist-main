@@ -1,0 +1,152 @@
+//<МИКСИНЫ>===================================
+@import "./settings/mixins";
+
+//</МИКСИНЫ>======================================
+
+//ФУНКЦИИ===================================
+@import "./settings/functions";
+
+//</ФУНКЦИИ>======================================
+
+//<ШРИФТЫ>======================================
+
+//<Подключаем шрифты>===================
+@import "./settings/fonts";
+
+//</Подключаем шрифты>==================
+
+//<Иконочные шрифты>======================================
+
+//</Иконочные шрифты>=====================================
+
+//<Шрифт по умолчанию>============================
+$font-family: "Gilroy", sans-serif;
+
+//</Шрифт по умолчанию>=============================
+
+//</ШРИФТЫ>======================================
+
+//<ПЕРЕМЕННЫЕ>============================
+
+// Ширина макета для адаптивного шрифта (адаптация по пикселям)
+$maxWidth: 1920;
+
+// Ширина контейнера
+$mw: 120;
+
+// Длительность свойства transition
+$ms: 0.3s;
+
+//</ПЕРЕМЕННЫЕ>============================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+:root {
+    --clr-default-100: #fff;
+    --clr-default-200: #f8f9fd;
+    --clr-default-250: #FBFCFE;
+    --clr-default-700: #5b5d64;
+    --clr-default-750:  #15162A;
+    --clr-default-800: #15162b;
+    --clr-default-900: #000;
+    --clr-primary-300: #75c397;
+    --clr-primary-400: #5156ea;
+    --clr-primary-500: #333367;
+}
+
+@import "./settings/normalize";
+
+body {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--clr-default-700);
+
+
+    &.lock {
+        overflow: hidden;
+
+        &--wrapper {
+            .wrapper::before {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity $ms, visibility $ms;
+            }
+        }
+    }
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 320px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $ms, visibility $ms;
+    }
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: $mw + rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+// Подключение общих элементов
+@import "ui";
+
+// Подключение общих элементов
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "./components/ui/header.scss";
+@import "./components/ui/modal.scss";
+@import "./components/indexPage/hero.scss";
+@import "components/indexPage/about";
+@import "./components/indexPage/possibilities";
+@import "./components/indexPage/partners";
+@import "./components/indexPage/service";
+@import "./components/indexPage/peculiarities";
+@import "./components/indexPage/integration";
+@import "./components/indexPage/plug";
+@import "./components/indexPage/plans";
+@import "./components/ui/slider.scss";
+@import "./components/indexPage/thinks";
+@import "./components/indexPage/optimization";
+@import "./components/indexPage/articles";
+@import "./components/faqPage/faq";
+@import "./components/blogPage/blog";
+@import "./components/videosPage/videos";
+@import "./components/articlePage/article";
+@import "./components/partnersPage/utility";
+@import "./components/companyPage/company";
+@import "./components/ui/footer.scss";
+
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
